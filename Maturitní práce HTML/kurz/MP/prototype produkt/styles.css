@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+.product {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+}
+.product-image {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.product-title {
+  font-size: 24px;
+  margin: 10px 0;
+}
+.product-price {
+  color: green;
+  font-size: 18px;
+}
+.product-description {
+  margin: 10px 0;
+}
+.filter-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.filter-button:hover {
+  background-color: #0056b3;
+}
+.tabs {
+  margin-top: 20px;
+}
+.tab-link {
+  background-color: #ddd;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.tab-link:hover {
+  background-color: #ccc;
+}
+.tab-content {
+  display: none;
+  margin-top: 20px;
+}

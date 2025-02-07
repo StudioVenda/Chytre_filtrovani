@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPV Dron Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #0073e6;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 10px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .button {
+            display: inline-block;
+            background: #0073e6;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FPV Dron Builder</h1>
+        <p>Vyberte si komponenty krok za krokem</p>
+    </header>
+    <main>
+        <section id="purpose">
+            <h2>Krok 1: Definujte účel dronu</h2>
+            <label for="purpose">Účel:</label>
+            <select id="purpose" name="purpose">
+                <option value="freestyle">Freestyle</option>
+                <option value="racing">Závody</option>
+                <option value="long-range">Long Range</option>
+                <option value="cinematic">Cinematic</option>
+            </select>
+            <a href="#frame" class="button">Pokračovat</a>
+        </section>
+
+        <section id="frame">
+            <h2>Krok 2: Vyberte rám</h2>
+            <label for="frame">Rám:</label>
+            <select id="frame" name="frame">
+                <option value="true-x">True-X (Freestyle)</option>
+                <option value="h-frame">H Frame (Závody)</option>
+                <option value="deadcat">Deadcat (Cinematic)</option>
+            </select>
+            <a href="#motors" class="button">Pokračovat</a>
+        </section>
+
+        <section id="motors">
+            <h2>Krok 3: Vyberte motory</h2>
+            <label for="motors">Velikost motorů:</label>
+            <select id="motors" name="motors">
+                <option value="2207">2207</option>
+                <option value="2306">2306</option>
+            </select>
+            <a href="#battery" class="button">Pokračovat</a>
+        </section>
+
+        <section id="battery">
+            <h2>Krok 4: Vyberte baterii</h2>
+            <label for="battery">Baterie:</label>
+            <select id="battery" name="battery">
+                <option value="4s">4S (14.8V)</option>
+                <option value="6s">6S (22.2V)</option>
+            </select>
+            <a href="#esc" class="button">Pokračovat</a>
+        </section>
+
+        <section id="esc">
+            <h2>Krok 5: Vyberte ESC</h2>
+            <label for="esc">ESC:</label>
+            <select id="esc" name="esc">
+                <option value="4in1">4-in-1 ESC</option>
+                <option value="individual">Samostatné ESC</option>
+            </select>
+            <a href="#fc" class="button">Pokračovat</a>
+        </section>
+
+        <!-- Additional sections for FC, VTX, TX/RX, FPV goggles, and propellers can be added similarly -->
+
+    </main>
+</body>
+</html>

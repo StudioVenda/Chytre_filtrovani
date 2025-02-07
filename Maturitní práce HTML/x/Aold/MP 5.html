@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPV Dron Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            border-bottom: 2px solid #2575fc;
+            padding-bottom: 10px;
+            color: #333;
+        }
+        .options-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        .option {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            border-radius: 10px;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            font-weight: bold;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .option:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .option.selected {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border: 2px solid #2575fc;
+        }
+        .option span {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .change-button {
+            background: #2575fc;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: background 0.3s ease;
+        }
+        .change-button:hover {
+            background: #6a11cb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FPV Dron Builder</h1>
+        <p>Vyberte komponenty a sledujte, jak bude váš dron vypadat!</p>
+    </header>
+    <main>
+        <section id="purpose">
+            <h2>Krok 1: Definujte účel dronu</h2>
+            <div class="options-container">
+                <div class="option" id="purpose-freestyle" style="background-image: url('freestyle.jpg');" onclick="selectOption('purpose', 'Freestyle', 'purpose-freestyle')">
+                    <span>Freestyle</span>
+                </div>
+                <div class="option" id="purpose-racing" style="background-image: url('racing.jpg');" onclick="selectOption('purpose', 'Racing', 'purpose-racing')">
+                    <span>Závody</span>
+                </div>
+                <div class="option" id="purpose-long-range" style="background-image: url('long-range.jpg');" onclick="selectOption('purpose', 'Long Range', 'purpose-long-range')">
+                    <span>Long Range</span>
+                </div>
+                <div class="option" id="purpose-cinematic" style="background-image: url('cinematic.jpg');" onclick="selectOption('purpose', 'Cinematic', 'purpose-cinematic')">
+                    <span>Cinematic</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="frame">
+            <h2>Krok 2: Vyberte rám</h2>
+            <div class="options-container">
+                <div class="option" id="frame-true-x" style="background-image: url('true-x.jpg');" onclick="selectOption('frame', 'True-X', 'frame-true-x')">
+                    <span>True-X</span>
+                </div>
+                <div class="option" id="frame-h-frame" style="background-image: url('h-frame.jpg');" onclick="selectOption('frame', 'H Frame', 'frame-h-frame')">
+                    <span>H Frame</span>
+                </div>
+                <div class="option" id="frame-deadcat" style="background-image: url('deadcat.jpg');" onclick="selectOption('frame', 'Deadcat', 'frame-deadcat')">
+                    <span>Deadcat</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="motors">
+            <h2>Krok 3: Vyberte motory</h2>
+            <div class="options-container">
+                <div class="option" id="motors-2207" style="background-image: url('2207.jpg');" onclick="selectOption('motors', '2207', 'motors-2207')">
+                    <span>2207</span>
+                </div>
+                <div class="option" id="motors-2306" style="background-image: url('2306.jpg');" onclick="selectOption('motors', '2306', 'motors-2306')">
+                    <span>2306</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="battery">
+            <h2>Krok 4: Vyberte baterii</h2>
+            <div class="options-container">
+                <div class="option" id="battery-4s" style="background-image: url('4s.jpg');" onclick="selectOption('battery', '4S', 'battery-4s')">
+                    <span>4S</span>
+                </div>
+                <div class="option" id="battery-6s" style="background-image: url('6s.jpg');" onclick="selectOption('battery', '6S', 'battery-6s')">
+                    <span>6S</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="esc">
+            <h2>Krok 5: Vyberte ESC</h2>
+            <div class="options-container">
+                <div class="option" id="esc-4in1" style="background-image: url('4in1.jpg');" onclick="selectOption('esc', '4-in-1 ESC', 'esc-4in1')">
+                    <span>4-in-1 ESC</span>
+                </div>
+                <div class="option" id="esc-individual" style="background-image: url('individual.jpg');" onclick="selectOption('esc', 'Individual ESC', 'esc-individual')">
+                    <span>Samostatné ESC</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script>
+        const compatibility = {
+            frame: {
+                'True-X': ['2207', '2306'],
+                'H Frame': ['2207'],
+                'Deadcat': ['2306']
+            },
+            battery: {
+                '4S': ['2207'],
+                '6S': ['2306']
+            }
+        };
+
+        let selections = {};
+
+        function selectOption(section, choice, id) {
+            if (selections[section]) {
+                document.getElementById(selections[section].id).classList.remove('selected');
+            }
+            selections[section] = { choice, id };
+            document.getElementById(id).classList.add('selected');
+            checkCompatibility(section);
+        }
+
+        function checkCompatibility(section) {
+            if (section === 'motors' && selections.frame) {
+                const validMotors = compatibility.frame[selections.frame.choice];
+                if (!validMotors.includes(selections.motors.choice)) {
+                    alert('Vybrané motory nejsou kompatibilní s vybraným rámem!');
+                }
+            }
+
+            if (section === 'battery' && selections.motors) {
+                const validBatteries = compatibility.battery[selections.battery.choice];
+                if (!validBatteries.includes(selections.motors.choice)) {
+                    alert('Vybraná baterie není kompatibilní s vybranými motory!');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPV Dron Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            border-bottom: 2px solid #2575fc;
+            padding-bottom: 10px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .image-preview {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .image-preview img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        function updatePreview(sectionId, imagePath) {
+            const preview = document.getElementById(`${sectionId}-preview`);
+            preview.src = imagePath;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>FPV Dron Builder</h1>
+        <p>Vyberte komponenty a sledujte, jak bude váš dron vypadat!</p>
+    </header>
+    <main>
+        <section id="purpose">
+            <h2>Krok 1: Definujte účel dronu</h2>
+            <label for="purpose">Účel:</label>
+            <select id="purpose" name="purpose" onchange="updatePreview('purpose', this.value + '.jpg')">
+                <option value="freestyle">Freestyle</option>
+                <option value="racing">Závody</option>
+                <option value="long-range">Long Range</option>
+                <option value="cinematic">Cinematic</option>
+            </select>
+            <div class="image-preview">
+                <img id="purpose-preview" src="freestyle.jpg" alt="Purpose preview">
+            </div>
+        </section>
+
+        <section id="frame">
+            <h2>Krok 2: Vyberte rám</h2>
+            <label for="frame">Rám:</label>
+            <select id="frame" name="frame" onchange="updatePreview('frame', this.value + '.jpg')">
+                <option value="true-x">True-X (Freestyle)</option>
+                <option value="h-frame">H Frame (Závody)</option>
+                <option value="deadcat">Deadcat (Cinematic)</option>
+            </select>
+            <div class="image-preview">
+                <img id="frame-preview" src="true-x.jpg" alt="Frame preview">
+            </div>
+        </section>
+
+        <section id="motors">
+            <h2>Krok 3: Vyberte motory</h2>
+            <label for="motors">Velikost motorů:</label>
+            <select id="motors" name="motors" onchange="updatePreview('motors', this.value + '.jpg')">
+                <option value="2207">2207</option>
+                <option value="2306">2306</option>
+            </select>
+            <div class="image-preview">
+                <img id="motors-preview" src="2207.jpg" alt="Motors preview">
+            </div>
+        </section>
+
+        <section id="battery">
+            <h2>Krok 4: Vyberte baterii</h2>
+            <label for="battery">Baterie:</label>
+            <select id="battery" name="battery" onchange="updatePreview('battery', this.value + '.jpg')">
+                <option value="4s">4S (14.8V)</option>
+                <option value="6s">6S (22.2V)</option>
+            </select>
+            <div class="image-preview">
+                <img id="battery-preview" src="4s.jpg" alt="Battery preview">
+            </div>
+        </section>
+
+        <section id="esc">
+            <h2>Krok 5: Vyberte ESC</h2>
+            <label for="esc">ESC:</label>
+            <select id="esc" name="esc" onchange="updatePreview('esc', this.value + '.jpg')">
+                <option value="4in1">4-in-1 ESC</option>
+                <option value="individual">Samostatné ESC</option>
+            </select>
+            <div class="image-preview">
+                <img id="esc-preview" src="4in1.jpg" alt="ESC preview">
+            </div>
+        </section>
+
+        <!-- Additional sections for FC, VTX, TX/RX, FPV goggles, and propellers can be added similarly -->
+
+    </main>
+</body>
+</html>
