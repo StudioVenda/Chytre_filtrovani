@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systém chytrého filtrování</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Systém chytrého filtrování</h1>
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Domů</a></li>
+                <li><a href="#">O nás</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="categories">
+            <button class='category-button' data-category="Motory">Motory</button>
+            <button class='category-button' data-category="Baterie">Baterie</button>
+            <button class='category-button' data-category="Vrtule">Vrtule</button>
+            <button class='category-button' data-category="ESC + FC + PBD">ESC + FC + PBD</button>
+            <button class='category-button' data-category="RC">RC</button>
+            <button class='category-button' data-category="Rámy">Rámy</button>
+            <button class='category-button' data-category="FPV">FPV</button>
+        </section>
+        <section id="dropdowns">
+            <div class='dropdown-container' data-category="Motory" style='display: none;'>
+                <h2>Motory</h2>
+                <ul class='dropdown'>
+                    <li><a href='#'>07xx - 20xx</a></li>
+                    <li><a href='#'>22xx - 24xx</a></li>
+                    <li><a href='#'>28xx a více</a></li>
+                </ul>
+            </div>
+            <div class='dropdown-container' data-category="Baterie" style='display: none;'>
+                <h2>Baterie</h2>
+                <ul class='dropdown'>
+                    <li><a href='#'>1S</a></li>
+                    <li><a href='#'>2S</a></li>
+                    <li><a href='#'>3S</a></li>
+                    <li><a href='#'>4S</a></li>
+                    <li><a href='#'>6S</a></li>
+                    <li><a href='#'>8S</a></li>
+                    <li><a href='#'>Strapy</a></li>
+                    <li><a href='#'>Nabíječe</a></li>
+                </ul>
+            </div>
+            <!-- Pokračování dalších kategorií podobně -->
+        </section>
+        <section id="products">
+            <div class="product">
+                <img src="produkt1.jpg" alt="Produkt 1">
+                <div class="product-details">
+                    <h3>Produkt 1</h3>
+                    <p>Popis produktu 1.</p>
+                    <button>Uložit do filtrů</button>
+                    <span class="price">Cena: 100 Kč</span>
+                </div>
+            </div>
+            <div class="product">
+                <img src="produkt2.jpg" alt="Produkt 2">
+                <div class="product-details">
+                    <h3>Produkt 2</h3>
+                    <p>Popis produktu 2.</p>
+                    <button>Uložit do filtrů</button>
+                    <span class="price">Cena: 200 Kč</span>
+                </div>
+            </div>
+            <!-- Přidání dalších produktů podobným způsobem -->
+            <div class="product">
+                <img src="produkt3.jpg" alt="Produkt 3">
+                <div class="product-details">
+                    <h3>Produkt 3</h3>
+                    <p>Popis produktu 3.</p>
+                    <button>Uložit do filtrů</button>
+                    <span class="price">Cena: 300 Kč</span>
+                </div>
+            </div>
+            <div class="product">
+                <img src="produkt4.jpg" alt="Produkt 4">
+                <div class="product-details">
+                    <h3>Produkt 4</h3>
+                    <p>Popis produktu 4.</p>
+                    <button>Uložit do filtrů</button>
+                    <span class="price">Cena: 400 Kč</span>
+                </div>
+            </div>
+            <div class="product">
+                <img src="produkt5.jpg" alt="Produkt 5">
+                <div class="product-details">
+                    <h3>Produkt 5</h3>
+                    <p>Popis produktu 5.</p>
+                    <button>Uložit do filtrů</button>
+                    <span class="price">Cena: 500 Kč</span>
+                </div>
+            </div>
+            <div class="product">
+                <img src="produkt6.jpg" alt="Produkt 6">
+                <div class="product-details">
+                    <h3>Produkt 6</h3>
+                    <p>Popis produktu 6.</p>
+                    <button>Uložit do filtrů</button>
+                    <span class="price">Cena: 600 Kč</span>
+                </div>
+            </div>
+            <div class="product">
+                <img src="produkt7.jpg" alt="Produkt 7">
+                <div class="product-details">
+                    <h3>Produkt 7</h3>
+                    <p>Popis produktu 7.</p>
+                    <button>Uložit do filtrů</button>
+                    <span class="price">Cena: 700 Kč</span>
+                </div>
+            </div>
+            <div class="product">
+                <img src="produkt8.jpg" alt="Produkt 8">
+                <div class="product-details">
+                    <h3>Produkt 8</h3>
+                    <p>Popis produktu 8.</p>
+                    <button>Uložit do filtrů</button>
+                    <span class="price">Cena: 800 Kč</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Systém chytrého filtrování. Všechna práva vyhrazena.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

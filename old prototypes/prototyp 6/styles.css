@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.category-button {
+    background-color: #2575fc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.category-button:hover {
+    background-color: #6a11cb;
+}
+
+.dropdown-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.dropdown-container h2 {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.dropdown {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.dropdown li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    color: #6a11cb;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+button {
+    background-color: #2575fc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #6a11cb;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #2575fc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    flex: 1 1 30%;
+    box-sizing: border-box;
+    margin: 1rem;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header, footer {
+    width: 100%;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    .product {
+        flex: 1 1 100%;
+    }
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
