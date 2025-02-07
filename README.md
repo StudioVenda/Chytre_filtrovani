@@ -1,2 +1,2 @@
 # Chytre_filtrovani
-Filtrování FPV komponent pro sestavení funkčního FPV dronu
+Filtrování FPV komponent pro sestavení funkčního FPV dronu.
